@@ -1,0 +1,11 @@
+:root {
+    --saffron: #FF9933;
+    --white: #FFFFFF;
+    --green: #138808;
+    --navy: #000080;
+    --chakra-blue: #000080;
+    --text-color: #333333;
+    --primary-font: 'Arial', sans-serif;
+    --header-height: 80px;
+    --section-padding: 5rem 2rem;
+}

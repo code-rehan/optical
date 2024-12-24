@@ -1,0 +1,97 @@
+@import 'variables.css';
+
+.services {
+    padding: var(--section-padding);
+    background: var(--white);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--saffron), var(--green));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, var(--saffron), var(--green));
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    color: var(--navy);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.service-features {
+    margin: 1.5rem 0;
+    text-align: left;
+    padding-left: 1rem;
+    border-left: 2px solid #f0f0f0;
+}
+
+.service-features li {
+    margin-bottom: 0.75rem;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service-features li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--saffron);
+}
+
+.price-range {
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    background: #f8f8f8;
+    border-radius: 5px;
+    color: var(--navy);
+    font-weight: 600;
+}

@@ -1,0 +1,47 @@
+@import 'variables.css';
+@import 'header.css';
+@import 'hero.css';
+@import 'services.css';
+@import 'contact.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    line-height: 1.6;
+    padding-top: var(--header-height);
+    background: var(--white);
+    color: var(--text-color);
+}
+
+.section-title {
+    text-align: center;
+    color: var(--navy);
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--saffron), var(--green));
+}
+
+footer {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}

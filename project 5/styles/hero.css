@@ -1,0 +1,50 @@
+@import 'variables.css';
+
+.hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                url('.images/indian.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 3rem;
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, var(--navy), var(--saffron));
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #555;
+    line-height: 1.6;
+}
